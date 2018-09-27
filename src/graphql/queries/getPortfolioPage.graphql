@@ -1,0 +1,9 @@
+query {
+    portfoliosPage {
+        heroImage {
+            url
+        }
+        heroText
+        title
+    }
+}

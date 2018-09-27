@@ -1,0 +1,12 @@
+query getPortfolio($slug: String){
+    portfolio(filter:{slug: {eq: $slug}}) {
+        name
+        images {
+            url
+        }
+        start
+        end
+        description
+        slug
+    }
+}

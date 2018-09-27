@@ -2,38 +2,38 @@ let privateElements = {
     apollo: null,
 };
 
-export default class PostsResource {
+export default class PortfolioResource {
     constructor(apollo) {
         privateElements.apollo = apollo;
     }
 
-    async getPosts() {
+    async getPortfolios() {
         let posts = await privateElements.apollo.query({
-            query: require('../graphql/queries/allPosts.graphql')
+            query: require('../graphql/queries/allPortfolios.graphql')
         });
 
-        return posts.data.allPosts;
+        return posts.data.allPortfolios;
     }
 
-    async getLatestPosts(quantity = 6) {
+    async getLatestPortfolio(quantity = 3) {
         let posts = await privateElements.apollo.query({
-            query: require('../graphql/queries/latestsPosts.graphql'),
+            query: require('../graphql/queries/latestsPortfolio.graphql'),
             variables: {
                 quantity: quantity
             }
         });
 
-        return posts.data.allPosts;
+        return posts.data.allPortfolios;
     }
 
-    async getPost(slug) {
+    async getPortfolio(slug) {
         let posts = await privateElements.apollo.query({
-            query: require('../graphql/queries/post.graphql'),
+            query: require('../graphql/queries/portfolio.graphql'),
             variables: {
                 slug
             }
         });
 
-        return posts.data.post;
+        return posts.data.portfolio;
     }
 }

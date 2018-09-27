@@ -1,0 +1,28 @@
+.pageHeroBlock {
+  position: relative;
+  margin-top: 40px;
+
+  &__title {
+    position: absolute;
+    margin: 0;
+    top: 10px;
+    padding: 15px;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+    background-color: rgba(#fff, .6);
+  }
+
+  &__image {
+    @extend .imageHero;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(#fff, .6);
+  }
+}

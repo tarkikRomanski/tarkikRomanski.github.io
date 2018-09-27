@@ -1,0 +1,9 @@
+query {
+    mainPage {
+        heroImage {
+            url
+        }
+        heroText
+        title
+    }
+}

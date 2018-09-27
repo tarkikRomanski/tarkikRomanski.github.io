@@ -1,0 +1,10 @@
+query getAllPosts {
+    allPosts(orderBy:createdAt_DESC) {
+        title
+        description
+        slug
+        heroimage {
+            url
+        }
+    }
+}

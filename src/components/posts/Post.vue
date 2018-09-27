@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import PostResource from '../resources/posts';
+    import PostResource from '../../resources/posts';
 
     export default {
         data() {

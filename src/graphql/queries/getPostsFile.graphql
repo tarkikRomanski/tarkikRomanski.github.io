@@ -1,0 +1,9 @@
+query {
+    postsPage {
+        heroImage {
+            url
+        }
+        heroText
+        title
+    }
+}

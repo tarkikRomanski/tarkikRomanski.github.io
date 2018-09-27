@@ -1,0 +1,9 @@
+query getLatestPortfolio($quantity: IntType) {
+    allPortfolios(orderBy:createdAt_DESC, first: $quantity) {
+            name
+            images {
+                url
+            }
+            slug
+        }
+}

@@ -1,0 +1,10 @@
+query getLatestPosts($quantity: IntType) {
+        allPosts(orderBy:createdAt_DESC, first: $quantity) {
+            title
+            description
+            slug
+            heroimage {
+                url
+            }
+        }
+}

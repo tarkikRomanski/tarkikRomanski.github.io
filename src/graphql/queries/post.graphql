@@ -1,0 +1,11 @@
+query getPost($slug: String){
+    post(filter:{slug: {eq: $slug}}) {
+        title
+        description
+        content
+        heroimage {
+            url
+            alt
+        }
+    }
+}

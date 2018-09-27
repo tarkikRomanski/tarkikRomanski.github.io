@@ -1,0 +1,25 @@
+.navigation {
+    position: fixed;
+    z-index: 9;
+    background: #000;
+    left: 0;
+    width: 100%;
+    top: 0px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+
+    &__item {
+      transition: all 1.5s;
+      padding: 20px;
+      color: #ffffff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(#fff, .7);
+        color: #000000;
+      }
+    }
+}

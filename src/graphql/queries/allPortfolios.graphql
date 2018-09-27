@@ -1,0 +1,9 @@
+query {
+    allPortfolios {
+        name
+        images {
+            url
+        }
+        slug
+    }
+}
