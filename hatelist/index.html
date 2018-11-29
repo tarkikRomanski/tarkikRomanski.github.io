@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <title>Vue.JS Grid</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.processed.css">
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/v-tooltip@2.0.0-rc.33/dist/v-tooltip.umd.min.js"></script>
+</head>
+<body>
+
+<script type="text/x-template" id="person">
+    <div :style="`top:${top}px; left:${left}px; position: absolute`">
+        <v-popover offset="40">
+            <div class="personItem">
+                <img :src="person.image" />
+            </div>
+
+            <template slot="popover">
+                <div class="controllPanel">
+                    <p>{{ person.name }}</p>
+                    <div class="buttonGroup">
+                        <button class="ratingMinus" v-on:click="minusRating(person)">-</button>
+                        <button class="ratingAdd" v-on:click="addRating(person)">+</button>
+                    </div>
+                    <a v-close-popover class="close">Close</a>
+                </div>
+            </template>
+        </v-popover>
+    </div>
+</script>
+
+<script type="text/x-template" id="peopleBoard">
+    <div class="peopleBoard">
+        <div class="boardSide-good"></div>
+        <div class="boardSide-bad"></div>
+
+        <person v-for="(item, index) in people" :person="item" :index="index" />
+    </div>
+</script>
+
+<div id="demo">
+    <board />
+</div>
+
+<!-- Scripts -->
+<script src="/scripts/components.js"></script>
+<script src="/scripts/index.js"></script>
+</body>
+</html>
